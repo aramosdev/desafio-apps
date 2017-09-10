@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Base Project</string>
+    <string name="title_connection">test</string>
+    <string name="message_not_connection">test</string>
+    <string name="title_activity_register">Cadastro</string>
+    <string name="title_activity_logins">Entrar</string>
+    <string name="login_title">Entrar</string>
+    <string name="register_title">Cadastro</string>
+    <string name="home_title">Bem vindo!</string>
+</resources>

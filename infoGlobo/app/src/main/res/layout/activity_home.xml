@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/menu_user_container"
+        android:layout_width="match_parent"
+        android:layout_height="172dp"
+        android:gravity="bottom">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_drawer" />
+        <TextView
+            android:id="@+id/quit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:padding="20dp"
+            android:layout_alignParentRight="true"
+            android:textSize="18sp"
+            android:text="Sair" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="5dp"
+                android:textSize="18sp"
+                android:text="OLA, VISITANTE" />
+            <TextView
+                android:id="@+id/user_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:layout_below="@id/user_name"
+                android:gravity="right"
+                android:text="Total de pontos - 1550" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <Button
+        style="@style/RippableButtonBackground"
+        android:id="@+id/starting_play"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Iniciar jogo >"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="23dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textColor="@color/color_white"/>
+    
+</LinearLayout>

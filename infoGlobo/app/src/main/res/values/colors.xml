@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#000000</color>
+
+    <color name="color_line_gray_light">#e8e8e8</color>
+    <color name="color_line_gray_bold">#999999</color>
+
+    <color name="color_blue_link_disabled">#40ffffff</color>
+
+    <color name="color_black_333333">#333333</color>
+    <color name="color_black_222222">#222222</color>
+    <color name="color_black_000000">#000000</color>
+
+    <color name="color_gray_AAAAAA">#AAAAAA</color>
+    <color name="color_gray_F5F5F5">#F5F5F5</color>
+    <color name="color_gray_CCCCCC">#CCCCCC</color>
+    <color name="color_gray_EFEFEF">#EFEFEF</color>
+    <color name="color_gray_ECECEC">#ECECEC</color>
+    <color name="color_gray_CDCDCD">#CDCDCD</color>
+    <color name="color_gray_ADADAD">#ADADAD</color>
+    <color name="color_gray_EEEEEE">#EEEEEE</color>
+    <color name="color_gray_E7E7E7">#E7E7E7</color>
+    <color name="color_gray_333333">#333333</color>
+    <color name="color_gray_666666">#666666</color>
+    <color name="color_gray_888888">#888888</color>
+    <color name="color_gray_999999">#999999</color>
+    <color name="color_gray_9899B6">#9899B6</color>
+    <color name="color_gray_FAFAFA">#FAFAFA</color>
+    <color name="color_gray_F2F2F2">#F2F2F2</color>
+    <color name="color_gray_C8C7CC">#C8C7CC</color>
+    <color name="color_gray_8E8E8E">#8E8E8E</color>
+    <color name="color_gray_424242">#424242</color>
+    <color name="color_gray_D7D7D7">#D7D7D7</color>
+    <color name="color_gray_DAD9D9">#DAD9D9</color>
+    <color name="color_gray_A0A0A0">#A0A0A0</color>
+
+    <color name="color_yellow_FBCB1D">#FBCB1D</color>
+
+    <color name="color_orange_FF691E">#FF691E</color>
+
+    <color name="color_red_E81549">#E81549</color>
+    <color name="color_red_F4546A">#F4546A</color>
+    <color name="color_red_F4546A_80_alpha">#80F4546A</color>
+    <color name="color_red_FA2004">#fa2004</color>
+    <color name="color_red_F6261e">#f6261e</color>
+    <color name="color_red_CA1D22">#CA1D22</color>
+    <color name="color_red_CC1919">#CC1919</color>
+
+    <color name="color_gray_575757">#575757</color>
+    <color name="color_purple_40286E">#40286E</color>
+
+    <color name="facebook_button_bg">#345e98</color>
+
+    <color name="color_bottom_button">#00aae3</color>
+    <color name="color_white">#FFFFFF</color>
+
+    <color name="color_blue_link_80_alpha">#8000aae3</color>
+
+</resources>
