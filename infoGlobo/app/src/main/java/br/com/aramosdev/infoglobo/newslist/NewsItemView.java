@@ -24,7 +24,6 @@ public class NewsItemView extends LinearLayout implements ViewWrapper.Binder<Con
     private TextView mTitle;
     private View mLine;
     private NewsContract.Interaction mPresenter;
-    private ContentNews mCurrentContentNews;
 
     public NewsItemView(Context context) {
         super(context);
@@ -45,7 +44,6 @@ public class NewsItemView extends LinearLayout implements ViewWrapper.Binder<Con
 
     @Override
     public void bind(ContentNews data, int position) {
-        mCurrentContentNews = data;
         mPresenter.handleNews(data);
     }
 
@@ -59,9 +57,5 @@ public class NewsItemView extends LinearLayout implements ViewWrapper.Binder<Con
         mEditoria.setVisibility(VISIBLE);
         mTitle.setVisibility(VISIBLE);
         mLine.setVisibility(VISIBLE);
-    }
-
-    public ContentNews getCurrentContentNews() {
-        return mCurrentContentNews;
     }
 }

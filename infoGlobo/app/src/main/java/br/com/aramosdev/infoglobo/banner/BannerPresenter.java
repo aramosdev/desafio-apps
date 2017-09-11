@@ -1,6 +1,8 @@
 package br.com.aramosdev.infoglobo.banner;
 
-import br.com.aramosdev.infoglobo.model.news.ContentNews;
+import java.util.List;
+
+import br.com.aramosdev.infoglobo.model.news.Image;
 import br.com.aramosdev.infoglobo.util.TextUtils;
 
 /**
@@ -16,23 +18,22 @@ public class BannerPresenter implements BannerContract.Interaction {
     }
 
     @Override
-    public void handleBanner(int bannerType, ContentNews contentNews) {
-        if (contentNews == null) return;
+    public void handleBanner(List<Image> images, String title) {
+        if (TextUtils.isEmptyOrNull(images)
+                || images.get(0) == null
+                || TextUtils.isNullOrEmpty(images.get(0).getUrl())
+                || TextUtils.isNullOrEmpty(title)) return;
 
-        switch (bannerType) {
-            case BannerView.BANNER_HOME:
-                if (!TextUtils.isEmptyOrNull(contentNews.getImages())
-                        && !TextUtils.isNullOrEmpty(contentNews.getTitle()) ) {
-                    mView.showBannerHome(contentNews.getImages().get(0).getUrl(), contentNews.getTitle());
-                }
-                break;
-            case BannerView.BANNER_DETAIL:
-                if (!TextUtils.isEmptyOrNull(contentNews.getImages())
-                        && !TextUtils.isNullOrEmpty(contentNews.getImages().get(0).getLegend()) ) {
-                    mView.showBannerDetail(contentNews.getImages().get(0).getUrl(),
-                            contentNews.getImages().get(0).getLegend());
-                }
-                break;
-        }
+        mView.showBannerHome(images.get(0).getUrl(), title);
+    }
+
+    @Override
+    public void handleBanner(List<Image> images) {
+        if (TextUtils.isEmptyOrNull(images)
+                || images.get(0) == null
+                || TextUtils.isNullOrEmpty(images.get(0).getUrl())
+                || TextUtils.isNullOrEmpty(images.get(0).getLegend())) return;
+
+        mView.showBannerDetail(images.get(0).getUrl(), images.get(0).getLegend());
     }
 }

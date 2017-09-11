@@ -1,7 +1,6 @@
 package br.com.aramosdev.infoglobo.banner;
 
 import android.content.Context;
-import android.support.annotation.IntDef;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -11,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import br.com.aramosdev.infoglobo.R;
+import br.com.aramosdev.infoglobo.core.ViewWrapper;
 import br.com.aramosdev.infoglobo.model.news.ContentNews;
 import br.com.aramosdev.infoglobo.util.ImageUtil;
 
@@ -18,14 +18,9 @@ import br.com.aramosdev.infoglobo.util.ImageUtil;
  * Created by Alberto.Ramos on 10/09/17.
  */
 
-public class BannerView extends LinearLayout implements BannerContract.View {
+public class BannerView extends LinearLayout implements BannerContract.View,
+        ViewWrapper.Binder<ContentNews> {
 
-    @IntDef(value = {BANNER_HOME, BANNER_DETAIL})
-    public @interface BannerType {}
-    public static final int BANNER_HOME = 1;
-    public static final int BANNER_DETAIL = 2;
-
-    private ContentNews mCurrentContentNews;
     private ImageView mImage;
     private TextView mTitle;
     private TextView mDescription;
@@ -54,9 +49,16 @@ public class BannerView extends LinearLayout implements BannerContract.View {
         mPresenter = new BannerPresenter(this);
     }
 
-    public BannerView bind(@BannerType int bannerType, ContentNews contentNews) {
-        mCurrentContentNews = contentNews;
-        mPresenter.handleBanner(bannerType, contentNews);
+    @Override
+    public void bind(ContentNews data, int position) {}
+
+    public BannerView home(ContentNews data) {
+        mPresenter.handleBanner(data.getImages(), data.getTitle());
+        return this;
+    }
+
+    public BannerView detail(ContentNews data) {
+        mPresenter.handleBanner(data.getImages());
         return this;
     }
 
@@ -74,4 +76,5 @@ public class BannerView extends LinearLayout implements BannerContract.View {
         mDescription.setText(description);
         mDescription.setVisibility(VISIBLE);
     }
+
 }

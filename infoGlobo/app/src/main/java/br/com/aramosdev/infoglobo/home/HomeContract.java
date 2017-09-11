@@ -13,7 +13,6 @@ import br.com.aramosdev.infoglobo.model.news.News;
 public interface HomeContract {
     interface View extends BaseContract.BaseView{
         void tryAgain();
-        void fillBanner(ContentNews contentNews);
         void fillNewsList(List<ContentNews> contentNewses);
     }
 

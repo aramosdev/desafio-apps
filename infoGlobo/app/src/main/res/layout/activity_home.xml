@@ -15,13 +15,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <br.com.aramosdev.infoglobo.banner.BannerView
-                android:id="@+id/view_banner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="gone"/>
-
-
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/list_news"
                 android:layout_width="match_parent"
@@ -29,5 +22,6 @@
                 android:layout_below="@+id/view_banner"/>
 
         </RelativeLayout>
+
     </android.support.v4.widget.SwipeRefreshLayout>
 </LinearLayout>

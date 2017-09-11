@@ -8,18 +8,15 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.aramosdev.infoglobo.R;
-import br.com.aramosdev.infoglobo.banner.BannerView;
 import br.com.aramosdev.infoglobo.core.BaseActivity;
 import br.com.aramosdev.infoglobo.model.news.ContentNews;
 import br.com.aramosdev.infoglobo.newsdetail.NewsDetailActivity;
 import br.com.aramosdev.infoglobo.newslist.NewsAdapter;
-import br.com.aramosdev.infoglobo.newslist.NewsItemView;
 
 /**
  * Created by Alberto.Ramos on 09/09/17.
@@ -29,7 +26,6 @@ public class HomeActivity extends BaseActivity implements HomeContract.View {
 
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mListNews;
-    private BannerView mBanner;
     private HomeContract.Interaction mPresenter;
     protected NewsAdapter mAdapter;
 
@@ -46,7 +42,6 @@ public class HomeActivity extends BaseActivity implements HomeContract.View {
         mListNews.setHasFixedSize(true);
         mListNews.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
-        mBanner = (BannerView) findViewById(R.id.view_banner);
         mPresenter = new HomePresenter(mApi, this);
         mAdapter = new NewsAdapter(this);
 
@@ -63,22 +58,12 @@ public class HomeActivity extends BaseActivity implements HomeContract.View {
     }
 
     @Override
-    public void fillBanner(final ContentNews contentNews) {
-        mBanner.bind(BannerView.BANNER_HOME, contentNews).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startNewsDetail(contentNews);
-            }
-        });
-    }
-
-    @Override
     public void fillNewsList(final List<ContentNews> contentNewses) {
         mAdapter.clearItems();
-        mAdapter.setOnClickListener(new View.OnClickListener() {
+        mAdapter.setOnItemClick(new NewsAdapter.OnItemClick() {
             @Override
-            public void onClick(View view) {
-                startNewsDetail(((NewsItemView)view).getCurrentContentNews());
+            public void onItemClicked(ContentNews contentNews) {
+                startNewsDetail(contentNews);
             }
         });
         mAdapter.setItems((ArrayList) contentNewses);
@@ -124,7 +109,6 @@ public class HomeActivity extends BaseActivity implements HomeContract.View {
     }
 
     private void loadHome() {
-        mBanner.setVisibility(View.GONE);
         mPresenter.getNews();
     }
 }

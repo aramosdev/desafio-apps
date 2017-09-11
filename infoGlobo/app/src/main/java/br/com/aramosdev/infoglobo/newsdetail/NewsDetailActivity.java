@@ -75,7 +75,7 @@ public class NewsDetailActivity extends BaseActivity implements NewsDetailContra
 
     @Override
     public void showBanner(ContentNews contentNews) {
-        mBannerView.bind(BannerView.BANNER_DETAIL, contentNews);
+        mBannerView.detail(contentNews);
     }
 
     @Override

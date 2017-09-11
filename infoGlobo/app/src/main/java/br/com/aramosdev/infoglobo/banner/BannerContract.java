@@ -1,6 +1,8 @@
 package br.com.aramosdev.infoglobo.banner;
 
-import br.com.aramosdev.infoglobo.model.news.ContentNews;
+import java.util.List;
+
+import br.com.aramosdev.infoglobo.model.news.Image;
 
 /**
  * Created by Alberto.Ramos on 10/09/17.
@@ -13,6 +15,7 @@ public interface BannerContract {
     }
 
     interface Interaction {
-        void handleBanner(int featureType, ContentNews contentNews);
+        void handleBanner(List<Image> images, String title);
+        void handleBanner(List<Image> images);
     }
 }

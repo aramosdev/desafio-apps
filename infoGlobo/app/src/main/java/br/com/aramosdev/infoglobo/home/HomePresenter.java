@@ -11,7 +11,8 @@ import br.com.aramosdev.infoglobo.util.TextUtils;
  * Created by Alberto.Ramos on 09/09/17.
  */
 
-public class HomePresenter extends BasePresenter<List<News>, HomeContract.View> implements HomeContract.Interaction {
+public class HomePresenter extends BasePresenter<List<News>, HomeContract.View>
+        implements HomeContract.Interaction {
 
     public HomePresenter(RestClient api, HomeContract.View view) {
         super(api, view);
@@ -34,8 +35,6 @@ public class HomePresenter extends BasePresenter<List<News>, HomeContract.View> 
                 return;
             }
 
-            mView.fillBanner(news.getContentNewses().get(0));
-            news.getContentNewses().remove(0);
             mView.fillNewsList(news.getContentNewses());
         }
     }
