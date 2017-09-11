@@ -14,9 +14,15 @@ public abstract class BaseRecyclerAdapter<T, V extends View & ViewWrapper.Binder
         extends RecyclerView.Adapter<ViewWrapper<T, V>> {
 
     protected ArrayList<T> mItems = new ArrayList<>();
+    protected BaseActivity mActivity;
+
+    public BaseRecyclerAdapter(BaseActivity mActivity) {
+        this.mActivity = mActivity;
+    }
 
     public void setItems(ArrayList<T> items) {
         this.mItems = items;
+        notifyDataSetChanged();
     }
 
     public ArrayList<T> getItems() {
@@ -42,5 +48,6 @@ public abstract class BaseRecyclerAdapter<T, V extends View & ViewWrapper.Binder
 
     public void clearItems() {
         mItems = new ArrayList<>();
+        notifyDataSetChanged();
     }
 }

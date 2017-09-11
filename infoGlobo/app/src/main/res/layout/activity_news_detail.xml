@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:visibility="visible"
+                tools:text="Sociedade"/>
+
+            <TextView
+                android:id="@+id/news_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/news_title"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:visibility="visible"
+                tools:text="Sociedade"/>
+            <RelativeLayout
+                android:id="@+id/container_author"
+                android:layout_width="match_parent"
+                android:layout_below="@id/news_subtitle"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/news_by"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginRight="3dp"
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    android:visibility="visible"
+                    android:text="@string/author_by"/>
+
+                <TextView
+                    android:id="@+id/news_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:textColor="@color/color_text_authors"
+                    android:layout_toRightOf="@id/news_by"
+                    android:textSize="10sp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    tools:text="Sociedade"
+                    android:visibility="visible"
+                    android:text="@string/author_by"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/news_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@id/container_author"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:visibility="visible"
+                tools:text="Sociedade"/>
+
+            <br.com.aramosdev.infoglobo.banner.BannerView
+                android:id="@+id/banner_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/news_date"
+                android:layout_marginBottom="25dp"/>
+
+            <TextView
+                android:id="@+id/news_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@id/banner_view"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:visibility="visible"
+                tools:text="Sociedade"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

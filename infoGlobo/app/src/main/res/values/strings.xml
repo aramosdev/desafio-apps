@@ -1,10 +1,8 @@
 <resources>
-    <string name="app_name">Base Project</string>
-    <string name="title_connection">test</string>
-    <string name="message_not_connection">test</string>
-    <string name="title_activity_register">Cadastro</string>
-    <string name="title_activity_logins">Entrar</string>
-    <string name="login_title">Entrar</string>
-    <string name="register_title">Cadastro</string>
-    <string name="home_title">Bem vindo!</string>
+    <string name="app_name">Desafio</string>
+    <string name="ops_title">Ops</string>
+    <string name="error_message">Serviço indisponível.\nTente novamente mais tarde.</string>
+    <string name="try_again">Tentar novamente</string>
+    <string name="cancel">Cancelar</string>
+    <string name="author_by">Por</string>
 </resources>

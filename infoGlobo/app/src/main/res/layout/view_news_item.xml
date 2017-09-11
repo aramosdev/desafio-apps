@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/container_info"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/news_editoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/news_image"
+            android:textColor="@color/color_text_editoria"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:text="Sociedade"/>
+
+        <TextView
+            android:id="@+id/news_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/news_editoria"
+            android:layout_toRightOf="@id/news_image"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:text="Não gostei da cor" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_news"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_gray_CCCCCC"
+        android:visibility="gone"/>
+
+</LinearLayout>

@@ -11,16 +11,16 @@ import java.util.List;
 
 public class News implements Serializable {
     @SerializedName("conteudos")
-    private List<Content> contents;
+    private List<ContentNews> contentNewses;
     @SerializedName("produto")
     private String productName;
 
-    public List<Content> getContents() {
-        return contents;
+    public List<ContentNews> getContentNewses() {
+        return contentNewses;
     }
 
-    public void setContents(List<Content> contents) {
-        this.contents = contents;
+    public void setContentNewses(List<ContentNews> contentNewses) {
+        this.contentNewses = contentNewses;
     }
 
     public String getProductName() {

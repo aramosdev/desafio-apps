@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import br.com.aramosdev.infoglobo.R;
 import br.com.aramosdev.infoglobo.model.api.RestClient;
@@ -63,7 +64,11 @@ public abstract class BaseActivity extends AppCompatActivity {
             setSupportActionBar(mToolbar);
 
         }
-        setTitle(title);
+        findViewById(R.id.toolbar_image).setVisibility(View.GONE);
+        TextView titleView = (TextView) findViewById(R.id.toolbar_title);
+        titleView.setVisibility(View.VISIBLE);
+        titleView.setText(title);
+        setTitle(null);
     }
 
     protected void setReturnButton(){

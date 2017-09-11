@@ -9,7 +9,7 @@ import java.util.List;
  * Created by Alberto.Ramos on 09/09/17.
  */
 
-public class Content implements Serializable {
+public class ContentNews implements Serializable {
 
     @SerializedName("id")
     private long id;
@@ -74,7 +74,7 @@ public class Content implements Serializable {
         isPublicityReport = publicityReport;
     }
 
-    public String getSubTitle() {
+    public String getSubtitle() {
         return subTitle;
     }
 
