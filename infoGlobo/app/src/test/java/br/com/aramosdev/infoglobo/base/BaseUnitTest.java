@@ -2,6 +2,7 @@ package br.com.aramosdev.infoglobo.base;
 
 import android.content.Context;
 
+import org.junit.Before;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.reactivestreams.Subscriber;
@@ -22,7 +23,7 @@ import static org.powermock.api.mockito.PowerMockito.doReturn;
 public abstract class BaseUnitTest<T> {
 
     @Mock
-    ApiSubscriber mMockedSubscriber;
+    protected ApiSubscriber mMockedSubscriber;
 
     @Mock
     public RestClient mApi;
@@ -37,6 +38,7 @@ public abstract class BaseUnitTest<T> {
 
     protected abstract T getFullResponse();
 
+    @Before
     public void setup(){
         MockitoAnnotations.initMocks(this);
 
@@ -44,14 +46,6 @@ public abstract class BaseUnitTest<T> {
         setupMockedResponse(getFullResponse());
     }
 
-    public void setupContextMocks(BaseContract.BaseView view) {
-        doReturn(mContext).when(view).getContext();
-    }
-
-    /**
-     * Intercept the request and return the "response" object
-     * @param response Response to return on request
-     */
     protected void setupMockedResponse(T response) {
         Flowable<T> mockedFlowable;
         if (response == null) {

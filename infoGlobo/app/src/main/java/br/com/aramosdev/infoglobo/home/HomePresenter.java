@@ -27,7 +27,10 @@ public class HomePresenter extends BasePresenter<List<News>, HomeContract.View>
     @Override
     public void handleResponse(List<News> response) {
         mView.hideLoading();
-        if (TextUtils.isEmptyOrNull(response)) mView.tryAgain();
+        if (TextUtils.isEmptyOrNull(response)) {
+            mView.tryAgain();
+            return;
+        }
 
         for (News news : response) {
             if (TextUtils.isEmptyOrNull(news.getContentNewses())) {

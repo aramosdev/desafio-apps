@@ -18,7 +18,7 @@ public class BannerPresenter implements BannerContract.Interaction {
     }
 
     @Override
-    public void handleBanner(List<Image> images, String title) {
+    public void handleBannerHome(List<Image> images, String title) {
         if (TextUtils.isEmptyOrNull(images)
                 || images.get(0) == null
                 || TextUtils.isNullOrEmpty(images.get(0).getUrl())
@@ -28,7 +28,7 @@ public class BannerPresenter implements BannerContract.Interaction {
     }
 
     @Override
-    public void handleBanner(List<Image> images) {
+    public void handleBannerDetail(List<Image> images) {
         if (TextUtils.isEmptyOrNull(images)
                 || images.get(0) == null
                 || TextUtils.isNullOrEmpty(images.get(0).getUrl())

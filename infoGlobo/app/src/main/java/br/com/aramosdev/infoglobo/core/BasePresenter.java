@@ -1,5 +1,8 @@
 package br.com.aramosdev.infoglobo.core;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+
 import br.com.aramosdev.infoglobo.model.api.ApiSubscriber;
 import br.com.aramosdev.infoglobo.model.api.RestClient;
 import io.reactivex.Flowable;
@@ -29,6 +32,14 @@ public abstract class BasePresenter<T, V extends BaseContract.BaseView>
     @Override
     public V getView() {
         return mView;
+    }
+
+    @Override
+    public Type genericType(){
+        ParameterizedType parameterizedType = (ParameterizedType) getClass()
+                .getGenericSuperclass();
+
+        return parameterizedType.getActualTypeArguments()[0];
     }
 
 }

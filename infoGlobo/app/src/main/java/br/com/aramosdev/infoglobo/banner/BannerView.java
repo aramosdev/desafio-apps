@@ -53,12 +53,12 @@ public class BannerView extends LinearLayout implements BannerContract.View,
     public void bind(ContentNews data, int position) {}
 
     public BannerView home(ContentNews data) {
-        mPresenter.handleBanner(data.getImages(), data.getTitle());
+        mPresenter.handleBannerHome(data.getImages(), data.getTitle());
         return this;
     }
 
     public BannerView detail(ContentNews data) {
-        mPresenter.handleBanner(data.getImages());
+        mPresenter.handleBannerDetail(data.getImages());
         return this;
     }
 

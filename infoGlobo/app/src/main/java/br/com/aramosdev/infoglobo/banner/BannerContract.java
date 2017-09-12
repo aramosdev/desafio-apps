@@ -15,7 +15,7 @@ public interface BannerContract {
     }
 
     interface Interaction {
-        void handleBanner(List<Image> images, String title);
-        void handleBanner(List<Image> images);
+        void handleBannerHome(List<Image> images, String title);
+        void handleBannerDetail(List<Image> images);
     }
 }
