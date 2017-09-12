@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import br.com.aramosdev.infoglobo.UnitTestUtil;
+import br.com.aramosdev.infoglobo.base.UnitTestUtil;
 import br.com.aramosdev.infoglobo.model.news.ContentNews;
 import br.com.aramosdev.infoglobo.util.DateUtils;
 

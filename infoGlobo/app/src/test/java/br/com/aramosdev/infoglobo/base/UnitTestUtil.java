@@ -1,4 +1,4 @@
-package br.com.aramosdev.infoglobo;
+package br.com.aramosdev.infoglobo.base;
 
 import com.google.gson.Gson;
 

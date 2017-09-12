@@ -7,7 +7,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 
-import br.com.aramosdev.infoglobo.UnitTestUtil;
+import br.com.aramosdev.infoglobo.base.UnitTestUtil;
 import br.com.aramosdev.infoglobo.model.news.ContentNews;
 import br.com.aramosdev.infoglobo.model.news.Image;
 

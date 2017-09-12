@@ -18,6 +18,5 @@ public class CustomApplication extends Application {
     public void onCreate() {
         super.onCreate();
         sInstance = this;
-
     }
 }

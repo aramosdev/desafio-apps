@@ -7,7 +7,7 @@ import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.aramosdev.infoglobo.UnitTestUtil;
+import br.com.aramosdev.infoglobo.base.UnitTestUtil;
 import br.com.aramosdev.infoglobo.base.BaseUnitTest;
 import br.com.aramosdev.infoglobo.core.BaseContract;
 import br.com.aramosdev.infoglobo.model.news.ContentNews;
